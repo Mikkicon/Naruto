@@ -40,7 +40,7 @@ $(document).ready(function() {
             }
             $node.hide();
             if(testLength==question.id){
-                window.location='../../../../AllesOderNichts/Frontend/www/index.html';
+                window.location='../../../../Naruto/Frontend/www/index.html';
             }
             showQuestions();
         })

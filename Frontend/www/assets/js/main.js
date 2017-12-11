@@ -1,7 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/**
- * Created by diana on 12.01.16.
- */
 
 var question_info = [
     {
@@ -12,7 +9,7 @@ var question_info = [
             one:"No",
             two:"Who is it?",
             three:"Yes",
-            four:"TOMAT",
+            four:"TOMAT"
         },
         correctAns:"three"
     },
@@ -24,7 +21,7 @@ var question_info = [
             one:"No",
             two:"Who is it?",
             three:"Yes",
-            four:"YA EBAL TVOU TELKY Y",
+            four:"YA EBAL TVOU TELKY Y"
         },
         correctAns:"four"
     },
@@ -36,7 +33,7 @@ var question_info = [
             one:"HALO",
             two:"Who is it?",
             three:"Yes",
-            four:"JAMALA",
+            four:"JAMALA"
         },
         correctAns:"four"
     },
@@ -48,7 +45,7 @@ var question_info = [
             one:"Loh",
             two:"Chmo?",
             three:"Privet",
-            four:"Gaben",
+            four:"Gaben"
         },
         correctAns:"two"
     },
@@ -61,7 +58,7 @@ var question_info = [
             one:"No",
             two:"Who is it?",
             three:"EEEEEEBOOI",
-            four:"TOMAT",
+            four:"TOMAT"
         },
         correctAns:"two"
     },
@@ -73,10 +70,10 @@ var question_info = [
             one:"No",
             two:"Who is it?",
             three:"YAYAY",
-            four:"TOMAT",
+            four:"TOMAT"
         },
         correctAns:"four"
-    },
+    }
 
 ];
 
@@ -103,7 +100,7 @@ $(function(){
     var Question=require('./pizza/Question');
     var TestDefine=require('./pizza/TestDefine');
 
-    if(window.location.href=='http://localhost:63342/AllesOderNichts/Frontend/www/questionRender.html'){
+    if(window.location.href=='http://localhost:63342/Naruto/Frontend/www/questionRender.html'){
         Question.showQuestions;
 
     }
@@ -151,7 +148,7 @@ $(document).ready(function() {
             }
             $node.hide();
             if(testLength==question.id){
-                window.location='../../../../AllesOderNichts/Frontend/www/index.html';
+                window.location='../../../../Naruto/Frontend/www/index.html';
             }
             showQuestions();
         })
@@ -168,20 +165,20 @@ var quest=require('../Questions');
 
 $('.naruto').click(function () {
     localStorage.setItem('test',"Naruto");
-    window.location='../../../../AllesOderNichts/Frontend/www/questionRender.html';
+    window.location='../../../../Naruto/Frontend/www/questionRender.html';
     countHowManyQuestionsInTest();
 })
 
 $('.psycho').click(function () {
    localStorage.setItem('test',"Psycho");
-    window.location='../../../../AllesOderNichts/Frontend/www/questionRender.html';
+    window.location='../../../../Naruto/Frontend/www/questionRender.html';
     countHowManyQuestionsInTest();
 });
 
 
 $('.prots').click(function () {
     localStorage.setItem('test',"Prots");
-    window.location='../../../../AllesOderNichts/Frontend/www/questionRender.html';
+    window.location='../../../../Naruto/Frontend/www/questionRender.html';
     countHowManyQuestionsInTest();
 });
 
@@ -195,7 +192,7 @@ function countHowManyQuestionsInTest() {
             counter++;
         }
     })
-    alert(counter);
-    localStorage.setItem('testLength',counter);
+    // alert(counter);
+    // localStorage.setItem('testLength',counter);
 }
 },{"../Questions":1}]},{},[2]);

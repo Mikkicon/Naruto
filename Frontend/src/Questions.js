@@ -1,6 +1,3 @@
-/**
- * Created by diana on 12.01.16.
- */
 
 var question_info = [
     {
@@ -11,7 +8,7 @@ var question_info = [
             one:"No",
             two:"Who is it?",
             three:"Yes",
-            four:"TOMAT",
+            four:"TOMAT"
         },
         correctAns:"three"
     },
@@ -23,7 +20,7 @@ var question_info = [
             one:"No",
             two:"Who is it?",
             three:"Yes",
-            four:"YA EBAL TVOU TELKY Y",
+            four:"YA EBAL TVOU TELKY Y"
         },
         correctAns:"four"
     },
@@ -35,7 +32,7 @@ var question_info = [
             one:"HALO",
             two:"Who is it?",
             three:"Yes",
-            four:"JAMALA",
+            four:"JAMALA"
         },
         correctAns:"four"
     },
@@ -47,7 +44,7 @@ var question_info = [
             one:"Loh",
             two:"Chmo?",
             three:"Privet",
-            four:"Gaben",
+            four:"Gaben"
         },
         correctAns:"two"
     },
@@ -60,7 +57,7 @@ var question_info = [
             one:"No",
             two:"Who is it?",
             three:"EEEEEEBOOI",
-            four:"TOMAT",
+            four:"TOMAT"
         },
         correctAns:"two"
     },
@@ -72,10 +69,10 @@ var question_info = [
             one:"No",
             two:"Who is it?",
             three:"YAYAY",
-            four:"TOMAT",
+            four:"TOMAT"
         },
         correctAns:"four"
-    },
+    }
 
 ];
 

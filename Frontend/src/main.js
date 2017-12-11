@@ -18,7 +18,7 @@ $(function(){
     var Question=require('./pizza/Question');
     var TestDefine=require('./pizza/TestDefine');
 
-    if(window.location.href=='http://localhost:63342/AllesOderNichts/Frontend/www/questionRender.html'){
+    if(window.location.href=='http://localhost:63342/Naruto/Frontend/www/questionRender.html'){
         Question.showQuestions;
 
     }
