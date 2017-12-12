@@ -17,8 +17,8 @@ $(function(){
     var AllQuestions=require('./Questions');
     var Question=require('./pizza/Question');
     var TestDefine=require('./pizza/TestDefine');
-
-    if(window.location.href=='http://localhost:63342/Naruto/Frontend/www/questionRender.html'){
+    var Results=require('./pizza/Results');
+    if(window.location.href=='http://localhost/mysite.local/www/Naruto/Frontend/www/questionRender.html'){
         Question.showQuestions;
 
     }

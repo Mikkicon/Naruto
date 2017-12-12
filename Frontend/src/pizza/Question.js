@@ -12,6 +12,8 @@ $(document).ready(function() {
         var counter=1;
         list.forEach(function (t) {
             if(t.id.toString()==whichQuestion&&test==t.title){
+
+
                 showOneQuestion(t);
             }
 
@@ -23,9 +25,8 @@ $(document).ready(function() {
 
     function showOneQuestion(question) {
         var $node=$(ONE_ROW_HTML);
-        //alert(question.question);
         $node.find(".question").text(question.question);
-        //alert(question.answers.one);
+        $node.find('.progress').text(question.id+"/"+testLength);
         $node.find('.opt1').text(question.answers.one);
         $node.find('.opt2').text(question.answers.two);
         $node.find('.opt3').text(question.answers.three);
@@ -40,13 +41,15 @@ $(document).ready(function() {
             }
             $node.hide();
             if(testLength==question.id){
-                window.location='../../../../Naruto/Frontend/www/index.html';
+                localStorage.setItem('rightAns',howManyCorrectAns);
+                window.location='http://localhost/mysite.local/www/Naruto/Frontend/www/results.html';
             }
             showQuestions();
         })
         $node.show();
         $node.appendTo($pole);
     }
+
     exports.showQuestions=showQuestions();
 })
 

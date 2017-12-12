@@ -99,13 +99,13 @@ $(function(){
     var AllQuestions=require('./Questions');
     var Question=require('./pizza/Question');
     var TestDefine=require('./pizza/TestDefine');
-
-    if(window.location.href=='http://localhost:63342/Naruto/Frontend/www/questionRender.html'){
+    var Results=require('./pizza/Results');
+    if(window.location.href=='http://localhost/mysite.local/www/Naruto/Frontend/www/questionRender.html'){
         Question.showQuestions;
 
     }
 });
-},{"./Questions":1,"./pizza/Question":3,"./pizza/TestDefine":4}],3:[function(require,module,exports){
+},{"./Questions":1,"./pizza/Question":3,"./pizza/Results":4,"./pizza/TestDefine":5}],3:[function(require,module,exports){
 
 $(document).ready(function() {
    var naruto=require('../Questions');
@@ -120,6 +120,8 @@ $(document).ready(function() {
         var counter=1;
         list.forEach(function (t) {
             if(t.id.toString()==whichQuestion&&test==t.title){
+
+
                 showOneQuestion(t);
             }
 
@@ -131,9 +133,8 @@ $(document).ready(function() {
 
     function showOneQuestion(question) {
         var $node=$(ONE_ROW_HTML);
-        //alert(question.question);
         $node.find(".question").text(question.question);
-        //alert(question.answers.one);
+        $node.find('.progress').text(question.id+"/"+testLength);
         $node.find('.opt1').text(question.answers.one);
         $node.find('.opt2').text(question.answers.two);
         $node.find('.opt3').text(question.answers.three);
@@ -148,37 +149,55 @@ $(document).ready(function() {
             }
             $node.hide();
             if(testLength==question.id){
-                window.location='../../../../Naruto/Frontend/www/index.html';
+                localStorage.setItem('rightAns',howManyCorrectAns);
+                window.location='http://localhost/mysite.local/www/Naruto/Frontend/www/results.html';
             }
             showQuestions();
         })
         $node.show();
         $node.appendTo($pole);
     }
+
     exports.showQuestions=showQuestions();
 })
 
 
 },{"../Questions":1}],4:[function(require,module,exports){
 
+    var Question=require('./Question');
+    var correct=localStorage.getItem('rightAns');
+    var length=localStorage.getItem('testLength');
+
+    if(window.location.href=='http://localhost/mysite.local/www/Naruto/Frontend/www/results.html'){
+        showRes();
+    }
+    
+    function showRes() {
+        $('.rightAnswers').text("Good job, you scored "+correct+" out of "+length);
+    }
+
+
+},{"./Question":3}],5:[function(require,module,exports){
+
 var quest=require('../Questions');
 
 $('.naruto').click(function () {
     localStorage.setItem('test',"Naruto");
-    window.location='../../../../Naruto/Frontend/www/questionRender.html';
+    window.location='http://localhost/mysite.local/www/Naruto/Frontend/www/questionRender.html';
     countHowManyQuestionsInTest();
 })
 
 $('.psycho').click(function () {
    localStorage.setItem('test',"Psycho");
-    window.location='../../../../Naruto/Frontend/www/questionRender.html';
+    window.location='http://localhost/mysite.local/www/Naruto/Frontend/www/questionRender.html';
     countHowManyQuestionsInTest();
 });
 
 
 $('.prots').click(function () {
+
     localStorage.setItem('test',"Prots");
-    window.location='../../../../Naruto/Frontend/www/questionRender.html';
+    window.location='http://localhost/mysite.local/www/Naruto/Frontend/www/questionRender.html';
     countHowManyQuestionsInTest();
 });
 
@@ -193,6 +212,6 @@ function countHowManyQuestionsInTest() {
         }
     })
     // alert(counter);
-    // localStorage.setItem('testLength',counter);
+     localStorage.setItem('testLength',counter);
 }
 },{"../Questions":1}]},{},[2]);

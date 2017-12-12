@@ -3,20 +3,21 @@ var quest=require('../Questions');
 
 $('.naruto').click(function () {
     localStorage.setItem('test',"Naruto");
-    window.location='../../../../Naruto/Frontend/www/questionRender.html';
+    window.location='http://localhost/mysite.local/www/Naruto/Frontend/www/questionRender.html';
     countHowManyQuestionsInTest();
 })
 
 $('.psycho').click(function () {
    localStorage.setItem('test',"Psycho");
-    window.location='../../../../Naruto/Frontend/www/questionRender.html';
+    window.location='http://localhost/mysite.local/www/Naruto/Frontend/www/questionRender.html';
     countHowManyQuestionsInTest();
 });
 
 
 $('.prots').click(function () {
+
     localStorage.setItem('test',"Prots");
-    window.location='../../../../Naruto/Frontend/www/questionRender.html';
+    window.location='http://localhost/mysite.local/www/Naruto/Frontend/www/questionRender.html';
     countHowManyQuestionsInTest();
 });
 
@@ -31,5 +32,5 @@ function countHowManyQuestionsInTest() {
         }
     })
     // alert(counter);
-    // localStorage.setItem('testLength',counter);
+     localStorage.setItem('testLength',counter);
 }
