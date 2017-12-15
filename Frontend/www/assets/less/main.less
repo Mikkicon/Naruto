@@ -12,21 +12,46 @@
     border-radius: 10px;
     margin: auto;
     //text-align: center;
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 500px;
     right: 50%;
     border: dashed 1px #aaa;
+    min-width: 500px;
+    max-width: 650px;
+
+  }
+#map {
+  height: 400px;
+  width: 600px;
+}
+  .pad{
+    bottom: 0;
   }
   body{
     background-color: #f1f1f2;
   }
   #backtomain{
     display: inline-block;
+    text-decoration: none;
+    background-color: cornflowerblue;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+    transition:	all	600ms ease-out;
+    color: white;
+    margin: 5px;
+  }
+  #backtomain:hover{
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition:	all	600ms ease-out;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(70, 119, 207);
+
   }
   #results_page{
     width: 70%;
     height: 100%;
-    background-color: white;
     font-size: large;
 
     margin:auto;
@@ -34,6 +59,21 @@
   .res{
     float: right;
     display: inline-block;
+    text-decoration: none;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+    transition:	all	600ms ease-out;
+    margin: 5px;
+  }
+  .res:hover{
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition:	all	600ms ease-out;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(70, 119, 207);
   }
 
   .prev, .next{
@@ -53,6 +93,22 @@
   .card:hover{
     box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition:	all	600ms ease-out;
+    background-color: rgb(110, 159, 247);
+  }
+  #colored{
+    font-family: Avenir;
+    font-size: 3em;
+    vertical-align: middle;
+    margin-left: 10%;
+    margin-right:  10%;
+  }
+  .rightAnswers{
+    font-family: Avenir;
+    font-size: 3em;
+    vertical-align: middle;
+    margin-left: 10%;
+    margin-right:  10%;
+    text-align: center;
   }
   //#progbar{
   //  width: 50%;
@@ -81,3 +137,6 @@
   .row{
     margin: auto;
   }
+#qna_page{
+  background-image: url(".././img/bc.jpg");
+}

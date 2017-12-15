@@ -18,6 +18,18 @@ $(function(){
     var Question=require('./pizza/Question');
     var TestDefine=require('./pizza/TestDefine');
     var Results=require('./pizza/Results');
+    function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+        });
+        console.log("Miqa loh");
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
     if(window.location.href=='http://localhost:5050/Naruto/Frontend/www/questionRender.html'){
         Question.showQuestions;
 

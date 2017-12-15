@@ -29,7 +29,7 @@ $(document).ready(function() {
         $node.find(".question").text(question.question);
         $node.find('.progress').text(question.id+"/"+testLength);
         $node.find('#progbar').text((question.id *100)/testLength+"%");
-        prbar.style.width = (question.id *100)/testLength+'%';
+        // $node.find('#progbar').style.width = (question.id *100)/testLength+'%';
         $node.find('.opt1').text(question.answers.one);
         $node.find('.opt2').text(question.answers.two);
         $node.find('.opt3').text(question.answers.three);

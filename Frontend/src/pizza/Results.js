@@ -8,6 +8,14 @@
     }
     
     function showRes() {
-        $('.rightAnswers').text("Good job, you scored "+correct+" out of "+length);
+
+        $('#colored').text(correct+" out of "+length);
+        if(correct > 7){
+            document.getElementById("colored").style.color = "green";
+        }else if(correct >4 && correct<7){
+            document.getElementById("colored").style.color = "yellow";
+        }else if(correct <4){
+            document.getElementById("colored").style.color = "red";
+        }
     }
 

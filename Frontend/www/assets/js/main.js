@@ -394,6 +394,18 @@ $(function(){
     var Question=require('./pizza/Question');
     var TestDefine=require('./pizza/TestDefine');
     var Results=require('./pizza/Results');
+    function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+        });
+        console.log("Miqa loh");
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
     if(window.location.href=='http://localhost:5050/Naruto/Frontend/www/questionRender.html'){
         Question.showQuestions;
 
@@ -431,7 +443,7 @@ $(document).ready(function() {
         $node.find(".question").text(question.question);
         $node.find('.progress').text(question.id+"/"+testLength);
         $node.find('#progbar').text((question.id *100)/testLength+"%");
-        prbar.style.width = (question.id *100)/testLength+'%';
+        // $node.find('#progbar').style.width = (question.id *100)/testLength+'%';
         $node.find('.opt1').text(question.answers.one);
         $node.find('.opt2').text(question.answers.two);
         $node.find('.opt3').text(question.answers.three);
@@ -485,7 +497,15 @@ $(document).ready(function() {
     }
     
     function showRes() {
-        $('.rightAnswers').text("Good job, you scored "+correct+" out of "+length);
+
+        $('#colored').text(correct+" out of "+length);
+        if(correct > 7){
+            document.getElementById("colored").style.color = "green";
+        }else if(correct >4 && correct<7){
+            document.getElementById("colored").style.color = "yellow";
+        }else if(correct <4){
+            document.getElementById("colored").style.color = "red";
+        }
     }
 
 
