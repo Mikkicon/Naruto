@@ -184,7 +184,7 @@ var question_info = [
     {
         id:6,
         title: "History",
-        question:"What does the U.S. Marine Corps motto--&#34;semper fidelis&#34;--mean?",
+        question:'What does the U.S. Marine Corps motto--"semper fidelis"--mean?',
         answers:{
             one:"Always victorious",
             two:"Always right",
@@ -246,10 +246,10 @@ var question_info = [
         title: "JavaScript",
         question:"1. Inside which HTML element do we put the JavaScript?",
         answers:{
-            one:"&lt;scripting&gt;",
-            two:"&lt;javascript&gt;",
-            three:"&lt;script&gt;",
-            four:"&lt;js&gt;"
+            one:"<scripting>",
+            two:" <javascript>",
+            three:" <script>",
+            four:" <js>"
         },
         correctAns:"three"
     },
@@ -257,12 +257,12 @@ var question_info = [
         id:2,
         title: "JavaScript",
         question:'2. What is the correct JavaScript syntax to change the content of the HTML element below? ' +
-        '&lt;p id="demo"&gt;This is a demonstration.&lt;/p&gt;"',
+        '<p id="demo">This is a demonstration.</p>',
     answers:{
-    one:"document.getElementById(&#34;demo&#34;).innerHTML = &#34;Hello World!&#34;;",
-        two:" document.getElement(&#34;p&#34;).innerHTML = &#34;Hello World!&#34;;",
-        three:" #demo.innerHTML = &#34;Hello World! &#34;;",
-        four:" document.getElementByName(&#34;p&#34;).innerHTML = &#34;Hello World!&#34;;"
+    one:'document.getElementById("demo").innerHTML = "Hello World!";',
+        two:'document.getElement("p").innerHTML = "Hello World!";',
+        three:'#demo.innerHTML = "Hello World!";',
+        four:'document.getElementByName("p").innerHTML = "Hello World!";'
 },
 correctAns:"four"
 },
@@ -271,42 +271,46 @@ correctAns:"four"
         title: "JavaScript",
     question:"3. Where is the correct place to insert a JavaScript?",
     answers:{
-    one:"The &lt;head&gt; section",
-        two:" The &lt;body&gt; section",
-        three:" Both the &lt;head&gt; section and the &lt;body&gt; section are correct"
+    one:"The <head> section",
+        two:" The <body> section",
+        three:" Both the <head> section and the <body> section are correct",
+        four:" The <script> section",
 },
     correctAns:"three"
 },
 {
     id:4,
         title: "JavaScript",
-    question:"4. What is the correct syntax for referring to an external script called &#34;xxx.js&#34;?",
+    question:'4. What is the correct syntax for referring to an external script called "xxx.js"?',
     answers:{
-    one:"&gt;script src=&#34;xxx.js&#34;&lt;",
-        two:"&gt;script href=&#34;xxx.js&#34;&lt;",
-        three:"&gt;script name=&#34;xxx.js&#34;&lt;"
+    one:'<script src="xxx.js">',
+        two:'<script href="xxx.js">',
+        three:'<script name="xxx.js">',
+        four:'<script lol="xxx.js">'
 },
-    correctAns:"four"
+    correctAns:"one"
 },
 {
     id:5,
         title: "JavaScript",
-    question:"5. The external JavaScript file must contain the &lt;script&gt;tag.",
+    question:"5. The external JavaScript file must contain the <script> tag.",
     answers:{
-    one:"True",
-        two:"False"
+        one:"True",
+        two:"False",
+        three:"I don't know",
+        four:"Both"
 },
     correctAns:"three"
 },
 {
     id:6,
         title: "JavaScript",
-    question:"6. How do you write &#34;Hello World&#34; in an alert box?",
+    question:'6. How do you write "Hello World" in an alert box?',
     answers:{
-    one:"alert(&#34;Hello World&#34;);",
-        two:" msgBox(&#34;Hello World&#34;);",
-        three:" msg(&#34;Hello World&#34;);",
-        four:" alertBox(&#34;Hello World&#34;);"
+    one:'alert("Hello World");',
+        two:' msgBox("Hello World");',
+        three:' msg("Hello World");',
+        four:' alertBox("Hello World;");'
 },
     correctAns:"four"
 },
@@ -317,22 +321,26 @@ correctAns:"four"
     answers:{
     one:"function myFunction()",
         two:" function:myFunction()",
-        three:" function = myFunction()"
+        three:" function = myFunction()",
+        four:" myFunction()"
 },
     correctAns:"three"
 },
-// {
-//     id:8,
-//         title: "JavaScript",
-//     question:"8. How do you call a function named &#34;myFunction&#34;?",
-//     answers:{
-//     one:”myFunction&#40;&#41;“,
-//     two:"function myFunction()",
-//         three:"call function myFunction()",
-//         four:" call myFunction()"
-// },
-//     correctAns:"four"
-// },
+{
+    id:8,
+        title: "JavaScript",
+    question:"8. How to insert a comment that has more than one line?",
+    answers: {
+        one: "<--This comment has more than one line-->",
+        two: "/*This comment has\n" +
+        "    //    more than one line*/",
+        three: "//This comment has\n" +
+        "    //     more than one line//",
+        four: "/*This comment has\n" +
+        "    //    more than one line*/"
+    },
+    correctAns:"three"
+},
 {
     id:9,
         title: "JavaScript",
@@ -348,7 +356,7 @@ correctAns:"four"
 {
     id:10,
         title: "JavaScript",
-    question:"10. How to write an IF statement for executing some code if &#34;i&#34; is NOT equal to 5?",
+    question:"10. How to write an IF statement for executing some code if is NOT equal to 5?",
     answers:{
     one:"if (i != 5)",
         two:" if (i <> 5)",
@@ -443,7 +451,7 @@ $(document).ready(function() {
             showQuestions();
             // $node.find('.prev').enable();
 
-        })
+        });
         $node.find('.prev').click(function () {
             if (whichQuestion > 1) {
                 whichQuestion--;
@@ -456,14 +464,14 @@ $(document).ready(function() {
             showQuestions();
 
 
-        })
+        });
         $node.show();
         $node.appendTo($pole);
 
     }
 
     exports.showQuestions=showQuestions();
-})
+});
 
 
 },{"../Questions":1}],4:[function(require,module,exports){
