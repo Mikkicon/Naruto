@@ -49,7 +49,7 @@ $(document).ready(function() {
             showQuestions();
             // $node.find('.prev').enable();
 
-        })
+        });
         $node.find('.prev').click(function () {
             if (whichQuestion > 1) {
                 whichQuestion--;
@@ -62,12 +62,12 @@ $(document).ready(function() {
             showQuestions();
 
 
-        })
+        });
         $node.show();
         $node.appendTo($pole);
 
     }
 
     exports.showQuestions=showQuestions();
-})
+});
 
