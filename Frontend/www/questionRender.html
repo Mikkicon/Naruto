@@ -11,7 +11,7 @@
     <!-- LESS JavaScript компілятор -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
 </head>
-<body>
+<body id="qna_page">
 
 <div class="inserQuestion">
 
@@ -25,7 +25,9 @@
 
         <span class="progress"></span>
         <br>
-        <span class="question"></span>
+        <div id="progbar" class="progress-bar progress-bar-striped active" style="width: 100%"> fds</div>
+        <br>
+        <h3 class="question"></h3>
         <br>
         <label class="form-check-label">
             <input class="form-check-input " type="radio" name="exampleRadios" id="exampleRadios1" value="one" checked>
@@ -50,6 +52,7 @@
             <span class="opt4"></span>
         </label>
     </div>
+    <button type="button" class="btn btn-warning prev">Previous</button>
     <button type="button" class="btn btn-warning next">Next</button>
 
 </div>

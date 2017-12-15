@@ -25,13 +25,15 @@ $(document).ready(function() {
 
     function showOneQuestion(question) {
         var $node=$(ONE_ROW_HTML);
+        var prbar = document.getElementById("progbar");
         $node.find(".question").text(question.question);
         $node.find('.progress').text(question.id+"/"+testLength);
+        $node.find('#progbar').text((question.id *100)/testLength+"%");
+        prbar.style.width = (question.id *100)/testLength+'%';
         $node.find('.opt1').text(question.answers.one);
         $node.find('.opt2').text(question.answers.two);
         $node.find('.opt3').text(question.answers.three);
         $node.find('.opt4').text(question.answers.four);
-
         $node.find('.next').click(function () {
             whichQuestion++;
             $("input[name='radioName']:checked").val();
@@ -42,12 +44,28 @@ $(document).ready(function() {
             $node.hide();
             if(testLength==question.id){
                 localStorage.setItem('rightAns',howManyCorrectAns);
-                window.location='http://localhost/mysite.local/www/Naruto/Frontend/www/results.html';
+                window.location='http://localhost:5050/Naruto/Frontend/www/results.html';
             }
             showQuestions();
+            // $node.find('.prev').enable();
+
+        })
+        $node.find('.prev').click(function () {
+            if (whichQuestion > 1) {
+                whichQuestion--;
+            }
+            if(whichQuestion===1){
+
+            }
+            $node.hide();
+
+            showQuestions();
+
+
         })
         $node.show();
         $node.appendTo($pole);
+
     }
 
     exports.showQuestions=showQuestions();

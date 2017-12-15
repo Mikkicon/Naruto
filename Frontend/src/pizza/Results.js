@@ -3,7 +3,7 @@
     var correct=localStorage.getItem('rightAns');
     var length=localStorage.getItem('testLength');
 
-    if(window.location.href=='http://localhost/mysite.local/www/Naruto/Frontend/www/results.html'){
+    if(window.location.href=='http://localhost:5050/Naruto/Frontend/www/results.html'){
         showRes();
     }
     
