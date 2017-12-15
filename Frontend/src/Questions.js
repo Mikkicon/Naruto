@@ -263,7 +263,7 @@ var question_info = [
         three:'#demo.innerHTML = "Hello World!";',
         four:'document.getElementByName("p").innerHTML = "Hello World!";'
 },
-correctAns:"four"
+correctAns:"one"
 },
 {
     id:3,
@@ -299,7 +299,7 @@ correctAns:"four"
         three:"I don't know",
         four:"Both"
 },
-    correctAns:"three"
+    correctAns:"two"
 },
 {
     id:6,
@@ -311,7 +311,7 @@ correctAns:"four"
         three:' msg("Hello World");',
         four:' alertBox("Hello World;");'
 },
-    correctAns:"four"
+    correctAns:"one"
 },
 {
     id:7,
@@ -323,7 +323,7 @@ correctAns:"four"
         three:" function = myFunction()",
         four:" myFunction()"
 },
-    correctAns:"three"
+    correctAns:"one"
 },
 {
     id:8,
@@ -338,7 +338,7 @@ correctAns:"four"
         four: "/*This comment has\n" +
         "    //    more than one line*/"
     },
-    correctAns:"three"
+    correctAns:"two"
 },
 {
     id:9,
@@ -350,7 +350,7 @@ correctAns:"four"
         three:" if i == 5 then",
         four:" if i = 5"
 },
-    correctAns:"three"
+    correctAns:"one"
 },
 {
     id:10,
@@ -362,7 +362,7 @@ correctAns:"four"
         three:" if i =! 5 then",
         four:" if i <> 5"
 },
-    correctAns:"four"
+    correctAns:"one"
 },
 
 

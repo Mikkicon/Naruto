@@ -29,11 +29,12 @@ $(document).ready(function() {
         $node.find(".question").text(question.question);
         $node.find('.progress').text(question.id+"/"+testLength);
         $node.find('#progbar').text((question.id *100)/testLength+"%");
-        // $node.find('#progbar').style.width = (question.id *100)/testLength+'%';
+        //prbar.style.width = (question.id *100)/testLength+'%';
         $node.find('.opt1').text(question.answers.one);
         $node.find('.opt2').text(question.answers.two);
         $node.find('.opt3').text(question.answers.three);
         $node.find('.opt4').text(question.answers.four);
+
         $node.find('.next').click(function () {
             whichQuestion++;
             $("input[name='radioName']:checked").val();
@@ -63,8 +64,42 @@ $(document).ready(function() {
 
 
         });
+        if(question.answers.one==undefined){
+            $node.find('.input1').hide();
+            $node.find('.opt1').hide();
+        }
+        else{
+            $node.find('.opt1').show();
+            $node.find('.input1').show();
+        }
+        if(question.answers.two==undefined){
+            $node.find('.opt2').hide();
+            $node.find('.input2').hide();
+        }
+        else {
+            $node.find('.opt2').show();
+            $node.find('.input2').show();
+        }
+        if(question.answers.three==undefined){
+            $node.find('.input3').hide();
+            $node.find('.opt3').hide();
+        }
+        else {
+            $node.find('.opt3').show();
+            $node.find('.input3').show();
+        }
+        if(question.answers.four==undefined){
+            alert("opt4 hidden");
+            $node.find('.opt4').hide();
+            $node.find('.input4').hide();
+        }
+        else{
+            $node.find('.input4').show();
+            $node.find('.opt4').show();
+        }
         $node.show();
         $node.appendTo($pole);
+
 
     }
 

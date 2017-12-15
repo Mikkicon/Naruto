@@ -264,7 +264,7 @@ var question_info = [
         three:'#demo.innerHTML = "Hello World!";',
         four:'document.getElementByName("p").innerHTML = "Hello World!";'
 },
-correctAns:"four"
+correctAns:"one"
 },
 {
     id:3,
@@ -300,7 +300,7 @@ correctAns:"four"
         three:"I don't know",
         four:"Both"
 },
-    correctAns:"three"
+    correctAns:"two"
 },
 {
     id:6,
@@ -312,7 +312,7 @@ correctAns:"four"
         three:' msg("Hello World");',
         four:' alertBox("Hello World;");'
 },
-    correctAns:"four"
+    correctAns:"one"
 },
 {
     id:7,
@@ -324,7 +324,7 @@ correctAns:"four"
         three:" function = myFunction()",
         four:" myFunction()"
 },
-    correctAns:"three"
+    correctAns:"one"
 },
 {
     id:8,
@@ -339,7 +339,7 @@ correctAns:"four"
         four: "/*This comment has\n" +
         "    //    more than one line*/"
     },
-    correctAns:"three"
+    correctAns:"two"
 },
 {
     id:9,
@@ -351,7 +351,7 @@ correctAns:"four"
         three:" if i == 5 then",
         four:" if i = 5"
 },
-    correctAns:"three"
+    correctAns:"one"
 },
 {
     id:10,
@@ -363,7 +363,7 @@ correctAns:"four"
         three:" if i =! 5 then",
         four:" if i <> 5"
 },
-    correctAns:"four"
+    correctAns:"one"
 },
 
 
@@ -400,7 +400,7 @@ $(function(){
             zoom: 4,
             center: uluru
         });
-        console.log("Miqa loh");
+        console.log("Max loh");
         var marker = new google.maps.Marker({
             position: uluru,
             map: map
@@ -443,11 +443,12 @@ $(document).ready(function() {
         $node.find(".question").text(question.question);
         $node.find('.progress').text(question.id+"/"+testLength);
         $node.find('#progbar').text((question.id *100)/testLength+"%");
-        // $node.find('#progbar').style.width = (question.id *100)/testLength+'%';
+        //prbar.style.width = (question.id *100)/testLength+'%';
         $node.find('.opt1').text(question.answers.one);
         $node.find('.opt2').text(question.answers.two);
         $node.find('.opt3').text(question.answers.three);
         $node.find('.opt4').text(question.answers.four);
+
         $node.find('.next').click(function () {
             whichQuestion++;
             $("input[name='radioName']:checked").val();
@@ -477,8 +478,42 @@ $(document).ready(function() {
 
 
         });
+        if(question.answers.one==undefined){
+            $node.find('.input1').hide();
+            $node.find('.opt1').hide();
+        }
+        else{
+            $node.find('.opt1').show();
+            $node.find('.input1').show();
+        }
+        if(question.answers.two==undefined){
+            $node.find('.opt2').hide();
+            $node.find('.input2').hide();
+        }
+        else {
+            $node.find('.opt2').show();
+            $node.find('.input2').show();
+        }
+        if(question.answers.three==undefined){
+            $node.find('.input3').hide();
+            $node.find('.opt3').hide();
+        }
+        else {
+            $node.find('.opt3').show();
+            $node.find('.input3').show();
+        }
+        if(question.answers.four==undefined){
+            alert("opt4 hidden");
+            $node.find('.opt4').hide();
+            $node.find('.input4').hide();
+        }
+        else{
+            $node.find('.input4').show();
+            $node.find('.opt4').show();
+        }
         $node.show();
         $node.appendTo($pole);
+
 
     }
 

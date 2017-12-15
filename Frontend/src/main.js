@@ -24,7 +24,7 @@ $(function(){
             zoom: 4,
             center: uluru
         });
-        console.log("Miqa loh");
+        console.log("Max loh");
         var marker = new google.maps.Marker({
             position: uluru,
             map: map
